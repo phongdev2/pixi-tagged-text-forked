@@ -1,5 +1,5 @@
 {
-  "name": "pixi-tagged-text",
+  "name": "pixi-tagged-text-forked",
   "version": "3.15.1",
   "description": "TaggedText for pixi.js",
   "author": "Mims Wright, JT Smith, tleunen",
@@ -23,7 +23,6 @@
   ],
   "keywords": [
     "pixi",
-    "pixi.js",
     "text",
     "multistyle",
     "multi style",
@@ -35,7 +34,21 @@
     "2d"
   ],
   "peerDependencies": {
-    "pixi.js": "^6"
+    "@pixi/app": "6.4.2",
+    "@pixi/constants": "6.4.2",
+    "@pixi/core": "6.4.2",
+    "@pixi/display": "6.4.2",
+    "@pixi/graphics": "6.4.2",
+    "@pixi/loaders": "6.4.2",
+    "@pixi/math": "6.4.2",
+    "@pixi/mesh": "6.4.2",
+    "@pixi/runner": "6.4.2",
+    "@pixi/settings": "6.4.2",
+    "@pixi/sprite": "6.4.2",
+    "@pixi/text": "6.4.2",
+    "@pixi/text-bitmap": "6.4.2",
+    "@pixi/ticker": "6.4.2",
+    "@pixi/utils": "6.4.2"
   },
   "dependencies": {
     "emoji-regex": "9.2.2"
@@ -71,15 +84,15 @@
   },
   "scripts": {
     "prepare": "install-peers && husky install",
-    "dev": "microbundle watch -f umd --name TaggedText --external 'pixi.js' --globals 'pixi.js'=PIXI",
+    "dev": "microbundle watch -f umd --name TaggedText --external --external '@pixi/app,@pixi/constants,@pixi/core,@pixi/display,@pixi/graphics,@pixi/loaders,@pixi/math,@pixi/mesh,@pixi/runner,@pixi/settings,@pixi/sprite,@pixi/text,@pixi/text-bitmap,@pixi/ticker,@pixi/utils'",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "demo": "npm run build && http-server . --port 8888 && opener http://localhost:8888/demo/index.html",
-    "build": "microbundle --name TaggedText --external 'pixi.js' --globals  'pixi.js'=PIXI",
+    "build": "microbundle --name TaggedText --external '@pixi/app,@pixi/constants,@pixi/core,@pixi/display,@pixi/graphics,@pixi/loaders,@pixi/math,@pixi/mesh,@pixi/runner,@pixi/settings,@pixi/sprite,@pixi/text,@pixi/text-bitmap,@pixi/ticker,@pixi/utils'",
     "lint:eslint": "eslint ./src/**/*.ts",
-    "lint:prettier": "prettier ./**/*.{ts,js,json,html,css,md} -l",
-    "fix:prettier": "prettier ./**/*.{ts,js,json,html,css,md} -w",
+    "lint:prettier": "prettier ./**/*.{ts,js,json,html,css,md} -l --log-level debug",
+    "fix:prettier": "prettier ./**/*.{ts,js,json,html,css,md} -w --log-level debug",
     "fix:changelog": "prettier CHANGELOG.md -w && git add CHANGELOG.md",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "pre-commit": "npm run fix:changelog && npm run lint && npm run test",

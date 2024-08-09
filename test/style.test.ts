@@ -1,4 +1,3 @@
-import * as PIXI from "pixi.js";
 import {
   TagTokens,
   TextStyleSet,
@@ -12,6 +11,8 @@ import {
 import * as style from "../src/style";
 import iconSrc from "./support/icon.base64";
 import DEFAULT_STYLE from "../src/defaultStyle";
+import { Sprite } from "@pixi/sprite";
+import { Texture } from "@pixi/core";
 
 describe("defaultStyles", () => {
   it("there should be a publically accessible default text styles object.", () => {
@@ -24,8 +25,8 @@ describe("defaultStyles", () => {
 describe("style module", () => {
   const iconImage = new Image();
   iconImage.src = `data:image/png;base64,${iconSrc}`;
-  const texture = PIXI.Texture.from(iconImage);
-  const icon = PIXI.Sprite.from(texture);
+  const texture = Texture.from(iconImage);
+  const icon = Sprite.from(texture);
 
   describe("combineStyles()", () => {
     it("should combine 2 styles into one.", () => {
@@ -1033,7 +1034,7 @@ describe("style module", () => {
   });
 
   describe("convertUnsupportedAlignment()", () => {
-    describe("It should convert alignments not supported by PIXI.Text into ones that are supported.", () => {
+    describe("It should convert alignments not supported by Text into ones that are supported.", () => {
       it("Should convert justified types to their classic counterparts", () => {
         expect(style.convertUnsupportedAlignment("justify")).toBe("left");
         expect(style.convertUnsupportedAlignment("justify-left")).toBe("left");

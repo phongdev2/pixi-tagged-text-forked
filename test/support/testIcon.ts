@@ -1,4 +1,5 @@
-import * as PIXI from "pixi.js";
+import { Texture } from "@pixi/core";
+import { Sprite } from "@pixi/sprite";
 import iconSrc from "./icon.base64";
 
 const W = 128;
@@ -19,14 +20,13 @@ export const createTexture = (
   src = createImage(),
   width = W,
   height = H
-): PIXI.Texture =>
-  PIXI.Texture.from(src, {
+): Texture =>
+  Texture.from(src, {
     width,
     height,
   });
-export const createSprite = (
-  texture: PIXI.Texture = createTexture()
-): PIXI.Sprite => new PIXI.Sprite(texture);
+export const createSprite = (texture: Texture = createTexture()): Sprite =>
+  new Sprite(texture);
 
 export const iconImage = createImage(iconSrc);
 export const iconTexture = createTexture(iconImage);

@@ -11,7 +11,7 @@ import {
   mapProp,
   countIf,
 } from "../src/functionalUtils";
-import * as PIXI from "pixi.js";
+import { Rectangle } from "@pixi/math";
 
 describe("functional util", () => {
   describe("combineRecords()", () => {
@@ -101,7 +101,7 @@ describe("functional util", () => {
 
   describe("assoc()", () => {
     it("Should set a property on a shallow clone of an object.", () => {
-      const rect = new PIXI.Rectangle(10, 10, 20, 20);
+      const rect = new Rectangle(10, 10, 20, 20);
       const rectWithArea = assoc("area")(400)(
         rect as unknown as Record<string, unknown>
       );

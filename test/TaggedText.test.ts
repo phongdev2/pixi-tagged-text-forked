@@ -1453,7 +1453,7 @@ Line 4`);
     });
   });
 
-  // https://github.com/mimshwright/pixi-tagged-text/issues/338
+  // https://github.com/phongdev2/pixi-tagged-text-forked/issues/338
   describe("custom inline string property", () => {
     it("Should propagate the string to the style object without modification.", () => {
       const testString = "This/should=not!be!modified=";

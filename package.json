@@ -1,22 +1,22 @@
 {
   "name": "pixi-tagged-text-forked",
   "version": "3.15.1",
-  "description": "TaggedText for pixi.js",
+  "description": "TaggedText for @pixi",
   "author": "Mims Wright, JT Smith, tleunen",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mimshwright/pixi-tagged-text.git"
+    "url": "git://github.com/phongdev2/pixi-tagged-text-forked.git"
   },
   "bugs": {
-    "url": "https://github.com/mimshwright/pixi-tagged-text/issues"
+    "url": "https://github.com/phongdev2/pixi-tagged-text-forded/issues"
   },
-  "homepage": "https://github.com/mimshwright/pixi-tagged-text",
+  "homepage": "https://github.com/phongdev2/pixi-tagged-text-forked",
   "source": "./src/index.ts",
-  "main": "./dist/pixi-tagged-text.js",
-  "umd:main": "./dist/pixi-tagged-text.umd.js",
-  "module": "./dist/pixi-tagged-text.m.js",
-  "exports": "./dist/pixi-tagged-text.modern.js",
+  "main": "./dist/pixi-tagged-text-forked.js",
+  "umd:main": "./dist/pixi-tagged-text-forked.umd.js",
+  "module": "./dist/pixi-tagged-text-forked.m.js",
+  "exports": "./dist/pixi-tagged-text-forked.modern.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"

@@ -1,4 +1,4 @@
-# pixi-tagged-text
+# pixi-tagged-text-forked
 
 [![NPM](https://nodei.co/npm/pixi-tagged-text.png)](https://nodei.co/npm/pixi-tagged-text/)
 
@@ -253,4 +253,4 @@ The build process is slightly complex and some of the build dependencies are at 
 
 ## License
 
-MIT, see [LICENSE.md](http://github.com/mimshwright/pixi-tagged-text/blob/main/LICENSE.md) for details.
+MIT, see [LICENSE.md](http://github.com/phongdev2/pixi-tagged-text-forked/blob/main/LICENSE.md) for details.

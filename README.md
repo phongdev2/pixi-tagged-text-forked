@@ -1,3 +1,5 @@
+# Fork from: pixi-tagged-text (https://nodei.co/npm/pixi-tagged-text/) to support pixi bundles v6
+
 # pixi-tagged-text-forked
 
 [![NPM](https://nodei.co/npm/pixi-tagged-text.png)](https://nodei.co/npm/pixi-tagged-text-forked/)

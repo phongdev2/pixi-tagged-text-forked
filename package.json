@@ -1,6 +1,6 @@
 {
   "name": "pixi-tagged-text-forked",
-  "version": "3.15.2",
+  "version": "3.15.3",
   "description": "TaggedText for @pixi",
   "author": "Mims Wright, JT Smith, tleunen",
   "license": "MIT",
@@ -19,7 +19,8 @@
   "exports": "./dist/pixi-tagged-text-forked.modern.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "keywords": [
     "pixi",
